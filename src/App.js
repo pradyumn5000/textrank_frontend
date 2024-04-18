@@ -12,7 +12,7 @@ function App() {
     e.preventDefault();
     setIsLoading(true); // Set loading state to true when submitting
     try {
-      const response = await axios.post('http://4.144.44.77/textrank/', {
+      const response = await axios.post('https://sc4052frontend.azurewebsites.net/', {
         url: url,
       });
       if (response.status === 200) {
