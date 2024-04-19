@@ -39,11 +39,16 @@ function App() {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
           />
+          <p style={{ fontSize: '0.8em', color: 'gray' }}>Supported sites: Yahoo News ... Some examples are</p>
+          <p style={{ fontSize: '0.8em', color: 'gray' }}>https://sg.news.yahoo.com/three-filipinos-dead-uae-floods-080008575.html</p>
+          <p style={{ fontSize: '0.8em', color: 'gray' }}>https://sg.news.yahoo.com/ex-prosecutor-explains-why-donald-075647915.html</p>
+          <p style={{ fontSize: '0.8em', color: 'gray' }}>https://sg.news.yahoo.com/kenya-mourns-defence-chief-killed-072635222.html</p>
         </label>
         <button type="submit" disabled={isLoading}>
           {isLoading ? 'Loading...' : 'Summarize'} {/* Button label changes based on loading state */}
         </button>
       </form>
+      
       {summary && (
         <div>
           <h2>Summary:</h2>
@@ -58,6 +63,7 @@ function App() {
       )}
     </div>
   );
+
 }
 
 export default App;
